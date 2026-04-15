@@ -1,0 +1,45 @@
+Git Policy
+
+Purpose
+Keep the repository clean, reusable, and safe.
+
+Track in git
+- Core system/control files in workspace root
+- Reusable templates in templates/
+- Durable project docs when explicitly curated
+- Reference docs in docs/
+- Empty structure placeholders like .gitkeep
+
+Do not track by default
+- .openclaw/ runtime state
+- artifacts/downloads/ contents
+- artifacts/outputs/ one-off deliverables
+- generated mail files such as .eml
+- transient logs, temp files, swap files
+
+Versioning rule for outputs
+- Default: outputs stay local
+- Exception: only version an output when Asaka explicitly asks, or when the output becomes a durable reusable asset
+- If an output should be versioned, move or copy it into docs/, templates/, projects/, or artifacts/reusable/
+
+Recommended flow
+1. Create task deliverables under artifacts/outputs/YYYY-MM-DD/
+2. Send/export/share from there
+3. Keep them local unless promoted
+4. Promote reusable assets into a tracked location
+
+Sensitive content rule
+- Credentials, auth state, mail artifacts, and local runtime state must never be pushed
+
+Current local ignore strategy
+- Ignore .openclaw/
+- Ignore one-off outputs under artifacts/outputs/
+- Ignore downloads under artifacts/downloads/
+- Ignore email artifacts such as email_*.eml
+
+Decision rule
+Before committing, ask:
+1. Is this reusable?
+2. Is this safe to publish?
+3. Will future-us benefit from versioning it?
+If any answer is no, keep it local.
