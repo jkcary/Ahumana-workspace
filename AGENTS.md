@@ -113,6 +113,7 @@ If error occurs -> record in FAILURE_DB.md
 If repeat pattern -> create/update template
 Update SKILL_TREE.md if improvement observed
 Store outputs as artifacts when applicable
+Commit local system improvements when they materially reduce future mistakes
 
 Rule:
 No task should be "one-time only" if it can be learned from.
@@ -270,6 +271,24 @@ archive -> route to archive/
 
 If uncertain, do not write to root.
 Choose the safest functional subdirectory.
+
+Git Versioning Rule
+
+Before committing any file, ask:
+
+is it reusable
+is it safe to publish
+will future-us benefit from versioning it
+
+If any answer is no:
+keep it local.
+
+Default git policy:
+- track system/control files
+- track reusable templates and curated docs
+- keep one-off outputs local by default
+- never push runtime state, credentials, mail artifacts, or transient operational files
+- if a generated output becomes durable, promote it into docs/, templates/, projects/, or artifacts/reusable/ before versioning
 
 v6 Autonomous Behavior Layer
 

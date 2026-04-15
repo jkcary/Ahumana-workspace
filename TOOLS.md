@@ -52,6 +52,15 @@ Downloaded task files default to:
 
 artifacts/downloads/YYYY-MM-DD/
 
+Git Tracking Rule
+
+Do not assume generated files should be versioned.
+Default behavior:
+- reusable system files can be tracked
+- one-off deliverables stay local
+- email artifacts, runtime state, auth state, and transient files must stay out of git
+- promote reusable outputs into docs/, templates/, projects/, or artifacts/reusable/ before tracking them
+
 Tool Failure Behavior
 
 If a tool fails:
@@ -59,6 +68,7 @@ If a tool fails:
 diagnose cause
 try the next clean solution
 record the lesson if the failure is instructive
+report the successful fallback path, not just the failed attempt
 
 Efficiency Standard
 

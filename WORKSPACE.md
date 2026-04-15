@@ -62,6 +62,24 @@ projects/
 
 depending on its function.
 
+Git Hygiene Policy
+
+Version control should preserve reusable structure, not local noise.
+
+Track by default:
+- system/control files
+- reusable templates
+- curated docs and durable project files
+
+Keep local by default:
+- one-off outputs
+- downloads
+- runtime state
+- email artifacts
+- transient operational files
+
+If an output graduates from one-off to reusable, move or copy it into a tracked location before committing.
+
 Cleanliness Rule
 
 If a file no longer serves:
