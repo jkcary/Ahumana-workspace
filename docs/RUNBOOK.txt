@@ -1,0 +1,182 @@
+================================================================================
+                         AHUMANA WORKSPACE RUNBOOK
+================================================================================
+
+QUICK START
+-----------
+
+1. COMMUNICATION
+   - Primary channel: Telegram (current)
+   - Alternative: Web chat via OpenClaw interface
+   - All conversations automatically logged and searchable
+
+2. BASIC INTERACTION
+   - Direct message Ahumana with any request
+   - Natural language works best
+   - Be specific for complex tasks
+   - Expect structured, minimal responses
+
+3. FILE HANDLING
+   - Request files: Ahumana can read, write, and edit
+   - Supported formats: Text, code, markdown, images
+   - System/control location: /home/hzf-ai-test/.openclaw/workspace/
+   - Task output location: /home/hzf-ai-test/.openclaw/workspace/artifacts/outputs/YYYY-MM-DD/
+   - Download location: /home/hzf-ai-test/.openclaw/workspace/artifacts/downloads/YYYY-MM-DD/
+   - Task outputs must not be saved to the workspace root unless explicitly requested
+   - Files are persistent and organized by function
+
+TASK EXECUTION
+--------------
+
+SIMPLE TASKS (execute directly):
+- Look up information
+- Read/write files
+- Run shell commands
+- Quick calculations
+- Single-step operations
+
+COMPLEX TASKS (plan + execute):
+- Multi-step workflows
+- Code projects
+- Research tasks
+- System changes
+
+WORKFLOW FOR COMPLEX TASKS:
+1. Classification → Simple or Complex
+2. If Complex → Create structured plan
+3. Execute with verification gates
+4. Route generated files using FILE_ROUTING.md
+5. Log to TASK_LOG.md or logs/
+6. If error → Record in FAILURE_DB.md or failures/
+7. If reusable → Create artifact in artifacts/ or template in templates/
+8. Update SKILL_TREE.md
+
+DOCUMENT REFERENCE
+------------------
+
+IDENTITY.md
+- Purpose: Who Ahumana is
+- Edit when: Changing personality, vibe, or emoji
+- Format: Key-value pairs
+
+USER.md
+- Purpose: Your preferences and context
+- Edit when: Preferences change, new working patterns emerge
+- Format: Key-value + notes sections
+
+SOUL.md
+- Purpose: Core behavioral principles
+- Edit when: Refining how Ahumana operates
+- Format: Principles and constraints
+
+AGENTS.md
+- Purpose: Task execution framework
+- Edit when: Improving execution patterns
+- Format: Rules and procedures
+
+TOOLS.md
+- Purpose: Tool usage guidelines
+- Edit when: New tools or usage patterns
+- Format: Doctrine and standards
+
+HEARTBEAT.md
+- Purpose: Periodic tasks
+- Edit when: Adding scheduled checks
+- Format: Task list (empty = disabled)
+
+RUNTIME FILES (auto-generated):
+- TASK_LOG.md: What was done and when
+- FAILURE_DB.md: What went wrong and why
+- SKILL_TREE.md: What improved over time
+- PROJECTS.md: Current project states
+- FILE_ROUTING.md: Where generated files must be saved
+
+COMMANDS & CAPABILITIES
+-----------------------
+
+FILE OPERATIONS:
+- Read: "Read file X"
+- Write: "Create file X with content..."
+- Edit: "Change line Y in file X to..."
+- Search: "Find files containing..."
+- Default generated outputs are saved under artifacts/outputs/YYYY-MM-DD/
+- Downloads are saved under artifacts/downloads/YYYY-MM-DD/
+- The workspace root is reserved for system/control files
+
+SYSTEM OPERATIONS:
+- Shell: "Run command..."
+- Process: "Check status of..."
+- Background: "Run this in background..."
+
+WEB OPERATIONS:
+- Search: "Search web for..."
+- Fetch: "Get content from URL..."
+
+MEMORY OPERATIONS:
+- Recall: "What did we discuss about..."
+- Search: "Find in memory..."
+
+SUB-AGENT OPERATIONS:
+- Spawn: "Do this in a new session..."
+- List: "Show running sessions..."
+- Send: "Message another session..."
+
+BEST PRACTICES
+--------------
+
+FOR YOU (Asaka):
+1. Be specific about desired outcomes
+2. Provide context for complex requests
+3. Review and approve external actions
+4. Give feedback on results
+
+FOR AHUMANA:
+1. Execute before explaining
+2. Verify outputs before trusting
+3. Convert high-value outputs to artifacts
+4. Update memory after meaningful tasks
+5. Never repeat the same mistake
+6. Never mix generated task files with root system files
+
+TROUBLESHOOTING
+---------------
+
+Issue: Response seems off
+→ Check IDENTITY.md and SOUL.md alignment
+
+Issue: Task not completed as expected
+→ Review TASK_LOG.md for execution trace
+
+Issue: Repeated errors
+→ Check FAILURE_DB.md for patterns
+
+Issue: Want to change behavior
+→ Edit SOUL.md or AGENTS.md
+
+Issue: Need to find old work
+→ Use memory search or check PROJECTS.md
+
+MAINTENANCE
+-----------
+
+DAILY:
+- Normal operation, no maintenance needed
+
+WEEKLY (optional):
+- Review TASK_LOG.md for patterns
+- Clean up temporary files if any
+
+MONTHLY (optional):
+- Audit FAILURE_DB.md for systemic issues
+- Update SKILL_TREE.md with new capabilities
+- Archive completed projects
+
+CONTACT & SUPPORT
+-----------------
+
+- OpenClaw Docs: /home/hzf-ai-test/.npm-global/lib/node_modules/openclaw/docs
+- Online Docs: https://docs.openclaw.ai
+- Community: https://discord.com/invite/clawd
+- Source: https://github.com/openclaw/openclaw
+
+================================================================================

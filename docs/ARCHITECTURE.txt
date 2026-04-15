@@ -1,0 +1,110 @@
+================================================================================
+                         AHUMANA WORKSPACE ARCHITECTURE
+================================================================================
+
+OVERVIEW
+--------
+This is the execution environment for Ahumana, a self-evolving digital familiar.
+The workspace follows a structured, document-driven approach to task execution,
+learning, and continuous improvement.
+
+DIRECTORY STRUCTURE
+-------------------
+/home/hzf-ai-test/.openclaw/workspace/
+│
+├── IDENTITY.md          # Core identity definition (name, vibe, emoji)
+├── USER.md              # User profile and preferences
+├── SOUL.md              # Behavioral principles and operating philosophy
+├── AGENTS.md            # Task execution framework and autonomous rules
+├── TOOLS.md             # Tool usage doctrine and efficiency standards
+├── BOOTSTRAP.md         # Initial setup guide (to be removed after bootstrap)
+├── HEARTBEAT.md         # Periodic task definitions (optional)
+├── ARCHITECTURE.txt     # This file - system architecture documentation
+├── RUNBOOK.txt          # Operational procedures and usage guide
+├── FILE_ROUTING.md      # File placement rules and root protection
+│
+├── avatars/             # Avatar assets
+│   └── ahumana.png      # Visual representation
+│
+├── artifacts/           # User-facing generated outputs and reusable assets
+│   ├── outputs/         # Generated deliverables by date
+│   └── downloads/       # Downloaded or external source files by date
+├── templates/           # Reusable templates
+├── projects/            # Project-specific files and working state
+├── logs/                # Execution logs and trace files
+├── failures/            # Failure records and prevention notes
+├── archive/             # Old or replaced files
+├── skills/              # Skill-related files
+│
+└── [root runtime index files]
+    ├── TASK_LOG.md      # Execution history index
+    ├── FAILURE_DB.md    # Error pattern index
+    ├── SKILL_TREE.md    # Capability evolution index
+    └── PROJECTS.md      # Ongoing project index
+
+CORE COMPONENTS
+---------------
+
+1. IDENTITY LAYER
+   - IDENTITY.md: Defines who Ahumana is (name, creature type, vibe, emoji)
+   - USER.md: Stores user preferences, working style, timezone
+   - SOUL.md: Core behavioral principles and personality constraints
+
+2. EXECUTION FRAMEWORK (AGENTS.md)
+   - Task classification: Simple vs Complex
+   - Autonomous execution loop: Plan → Execute → Verify → Reflect → Improve
+   - Mandatory compounding: No task ends as one-time if it can improve the system
+   - Error handling: Same mistake never occurs twice
+
+3. TOOL SYSTEM (TOOLS.md)
+   - Force multiplier philosophy
+   - Minimum effective tool selection
+   - Output verification and artifact conversion
+   - External action safeguards
+
+4. MEMORY & LEARNING
+   - TASK_LOG.md: Records execution outcomes
+   - FAILURE_DB.md: Prevents repeated errors
+   - SKILL_TREE.md: Tracks capability improvements
+   - PROJECTS.md: Maintains long-term work state
+
+5. HEARTBEAT SYSTEM (HEARTBEAT.md)
+   - Optional periodic task scheduling
+   - Empty by default (no automatic tasks)
+   - User-defined monitoring or recurring actions
+
+DESIGN PRINCIPLES
+-----------------
+
+1. EXECUTION FIRST
+   - Produce results before explanations
+   - Minimize unnecessary steps
+   - Direct answers over elaborate reasoning
+
+2. CONTINUOUS IMPROVEMENT
+   - Every meaningful task updates the system
+   - Patterns become reusable artifacts
+   - Errors become prevention rules
+
+3. STRUCTURED ORGANIZATION
+   - Clear naming conventions
+   - Logical file placement
+   - No duplication
+   - Fast retrieval optimization
+   - Generated task files never mix with root system/control files
+
+4. AUTONOMY WITH BOUNDARIES
+   - Self-directed within user intent
+   - No external action without approval
+   - Suggest, don't override
+
+INTEGRATION POINTS
+------------------
+
+- OpenClaw Gateway: Provides tool access, session management, and channel routing
+- Telegram: Primary communication channel (current)
+- File System: All durable state stored in workspace
+- File Routing: Root is reserved for system/control files; task outputs go under artifacts/outputs or other functional subdirectories
+- Memory System: Semantic search across MEMORY.md and session transcripts
+
+================================================================================
