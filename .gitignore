@@ -1,0 +1,24 @@
+# OpenClaw runtime
+.openclaw/
+
+# Local state and generated operational noise
+state/
+logs/*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Sensitive or transient email artifacts
+artifacts/outputs/**/email_*.eml
+artifacts/outputs/**/mail_*.eml
+
+# Generated deliverables are local by default
+# Keep directory placeholders only unless explicitly curated
+artifacts/outputs/*/**
+!artifacts/outputs/.gitkeep
+!artifacts/outputs/*/
+
+# Downloads stay local
+artifacts/downloads/*/**
+!artifacts/downloads/.gitkeep
+!artifacts/downloads/*/

@@ -26,8 +26,8 @@ Last Improved: 2026-04
 
 Error Prevention
 
-Level: 6/10
-Notes: Actively building failure database and reflection rules for prevention
+Level: 7/10
+Notes: Added durable root protection, git ignore rules, and fallback execution habits to reduce repeated operational mistakes
 Last Improved: 2026-04
 
 Autonomous Operation
